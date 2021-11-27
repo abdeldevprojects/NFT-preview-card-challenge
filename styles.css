@@ -1,0 +1,117 @@
+:root {
+    --soft-primary-blue : hsl(215, 51%, 70%);
+    --primary-cyan : hsl(178, 100%, 50%);
+    --very-dark-blue-main : hsl(217, 54%, 11%);
+    --very-dark-blue-bg : hsl(216, 50%, 16%);
+    --very-dark-blue-line : hsl(215, 32%, 27%);
+    --white : hsl(0, 0%, 100%);
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--white);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body {
+    background-color: var(--very-dark-blue-main);
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    
+}
+
+#card {
+    width: 380px;
+    background-color: var(--very-dark-blue-bg);
+    margin: 150px auto;
+    border-radius: 15px;
+}
+
+#card .container {
+    padding: 20px;
+}
+
+.nft-image img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mid .nft-name {
+    padding: 15px 0;
+    color: var(--white);
+}
+
+.mid .description {
+    color: var(--soft-primary-blue);
+    line-height: 1.7;
+}
+
+.price-countdown {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.price-countdown .price .eth-cost {
+    color: var(--primary-cyan);
+}
+
+.price-countdown .countdown .time-left {
+    color: var(--soft-primary-blue);
+}
+
+.price-countdown .eth-cost, .price-countdown .time-left {
+    padding-left: 5px;
+}
+
+hr {
+    height: 1px;
+    background-color: var(--soft-primary-blue);
+    border: none;
+}
+
+.creator {
+    display: flex;
+    padding: 15px 0;
+}
+
+.creator .creator-img {
+    width: 40px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+.creator .creator-name {
+    color: var(--soft-primary-blue);
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.creator-name .hightlight {
+    color: var(--white);
+}
+
+@media (min-width:375px) {
+    #card {
+        width: 340px;
+        background-color: var(--very-dark-blue-bg);
+        margin: 150px auto;
+        border-radius: 15px;
+    }
+    
+    #card .container {
+        padding: 20px;
+    }
+}
