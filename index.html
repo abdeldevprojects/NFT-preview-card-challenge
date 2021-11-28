@@ -17,36 +17,38 @@
 </head>
 <body>
 
-  <main id="card">
+  <main class="card">
     <div class="container">
+      <h1 class="sr-only">This is Equilibrium, a NFT for sale</h1>
       <div class="nft-image">
-        <img  src="images/image-equilibrium.jpg" alt="NFT image">
+        <img class="view-icon" src="./images/icon-view.svg" alt="">
+        <img class="equilibrium"  src="images/image-equilibrium.jpg" aria-hidden="true" alt="Equilibrium">
       </div>
       <div class="mid">
-        <h2 class="nft-name">Equilibrium #3429</h2>
+        <h2 class="nft-name hover">Equilibrium #3429</h2>
         <p class="description">Our Equilibrium collection promotes balance and calm.</p>
         <div class="price-countdown">
           <div class="price">
             <img class="eth-icon" src="./images/icon-ethereum.svg" alt="">
-            <span class="eth-cost">0.041 ETH</span>
+            <p class="eth-cost">0.041 ETH</p>
           </div>
           <div class="countdown">
             <img src="./images/icon-clock.svg" alt="">
-            <span class="time-left">3 days left</span>
+            <p class="time-left">3 days left</p>
           </div>
         </div>
       </div>
-      <hr>
+      <hr class="line">
       <div class="creator">
-        <img class="creator-img" src="./images/image-avatar.png" alt="NFT creator photo">
-        <p class="creator-name">Creation of <span class="hightlight">Jules Wyvers</span></p>
+        <img class="creator-img" src="./images/image-avatar.png" alt="Jules Wyvers">
+        <p class="creator-name">Creation of <a href="https://www.google.com/?hl=fr" class="hightlight hover">Jules Wyvers</a></p>
       </div>
 
     </div>
   </main>
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/abdeldevprojects">Abdelilah Rhalimi</a>.
-  </div>
+  </footer>
 </body>
 </html>

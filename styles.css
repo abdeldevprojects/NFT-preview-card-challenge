@@ -6,7 +6,6 @@
     --very-dark-blue-line : hsl(215, 32%, 27%);
     --white : hsl(0, 0%, 100%);
 
-
 }
 
 * {
@@ -25,32 +24,105 @@
     color: hsl(228, 45%, 44%); 
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: var(--very-dark-blue-main);
     font-size: 18px;
     font-family: 'Outfit', sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
     
 }
 
-#card {
-    width: 380px;
+.card {
+    max-width: 380px;
     background-color: var(--very-dark-blue-bg);
-    margin: 150px auto;
     border-radius: 15px;
 }
 
-#card .container {
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+  
+
+.card .container {
     padding: 20px;
 }
 
-.nft-image img{
+.nft-image {
+    position: relative;
+
+}
+
+.nft-image .equilibrium{
     width: 100%;
     border-radius: 10px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
+
+.nft-image .view-icon {
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.nft-image:hover .equilibrium {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.nft-image:hover .view-icon {
+    opacity: 1;
+}
+
+.nft-image::before {
+    content: "";
+    opacity: 0;
+    background-color: #00fff7;
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.3s opacity ease;
+}
+
+.nft-image:hover::before {
+    opacity: 0.5;
+}
+
+
+/* Mid Content */
 
 .mid .nft-name {
     padding: 15px 0;
-    color: var(--white);
+    color:  var(--white);
 }
 
 .mid .description {
@@ -64,6 +136,14 @@ body {
     padding: 20px 0;
 }
 
+.price-countdown .price,
+.price-countdown .countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    align-items: center;
+}
+
 .price-countdown .price .eth-cost {
     color: var(--primary-cyan);
 }
@@ -73,6 +153,7 @@ body {
 }
 
 .price-countdown .eth-cost, .price-countdown .time-left {
+    
     padding-left: 5px;
 }
 
@@ -103,15 +184,18 @@ hr {
     color: var(--white);
 }
 
-@media (min-width:375px) {
-    #card {
-        width: 340px;
-        background-color: var(--very-dark-blue-bg);
-        margin: 150px auto;
-        border-radius: 15px;
+.hover:hover {
+    color: var(--primary-cyan);
+    cursor: pointer;
+}
+
+footer {
+   top: -200px;
+}
+
+@media only screen and (max-width:375px) {
+    .card {
+        max-width: 340px;
     }
     
-    #card .container {
-        padding: 20px;
-    }
 }
